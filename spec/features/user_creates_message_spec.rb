@@ -14,7 +14,7 @@ feature 'user creates a new message' do
 		check('user2')
 		click_on 'submit'
 
-
+		expect(page.current_path).to eq root_path
 
 
 	end

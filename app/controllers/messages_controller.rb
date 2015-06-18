@@ -12,10 +12,10 @@ class MessagesController < ApplicationController
 
 		if @message.save
 			flash[:success] = "Message Sent!"
-			redirect_to messages_path
+			redirect_to root_path
 		else
 			flash[:alert] = "Great Scott!"
-			redirect_to root_url
+			redirect_to :new
 		end
 	end
 
