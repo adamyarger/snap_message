@@ -1,6 +1,6 @@
 <div id="stream">
 	<%= form_for :message, url: messages_path do |f| %>
-		<%= f.text_area :body,  id: "url", class: "message_body" %>
+		<%= f.text_area :body,  id: "url", placeholder: "Message", class: "message_body" %>
 
 		<div id="stream-list" class="follow-list">
 			<ul>   
