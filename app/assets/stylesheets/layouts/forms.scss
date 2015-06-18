@@ -1,22 +1,20 @@
-#cd-cart {
-	/*float: right;*/
+
+.form-bigbox {
+	@include outer-container;
+	margin-bottom: 150px;
+}
+
+.form-box {
+	@include span-columns(6);
+	@include shift(3);
+  background-color: $white;
+  padding: 40px;
+/*  margin-top: 100px;*/
+  border-radius: 10px;
 }
 
 #stream {
-	margin-bottom: 1.25em;
-	position: fixed;
-	padding: 0 0 .75em 0;
-	font-weight: 400;
-	/*float: left;*/
-	z-index: 2;
-	background: #fff;
-	height: 100%;
-	width: 325px;
-	-webkit-font-smoothing: antialiased;
-	margin-top: 2px;
-	overflow: scroll;
-	right: 0px;
-	/*display: none;*/
+	
 }
 
 
@@ -73,11 +71,11 @@
 	bottom: 0;
 	box-shadow: 0 -2px 0 rgba(217,224,226,0.2);
 	font-size: .875em;
-	right: 0;
+	/*right: 0;*/
 	padding: .75em 0 1em;
 	position: fixed;
 	text-align: center;
-	width: 324px;
+	/*width: 324px;*/
 	color: #ff3c1f;
 	font-family:"Brandon", Helvetica, Arial, sans-serif;
 
