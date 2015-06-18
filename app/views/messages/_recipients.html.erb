@@ -1,0 +1,24 @@
+<div id="stream">
+	<%= form_for :message, url: messages_path do |f| %>
+		<%= f.text_area :content,  id: "url", class: "message_body" %>
+
+		<div id="stream-list" class="follow-list">
+			<ul>   
+				<% @recipients.each do |user| %>
+					<label for="user<%= user.id %>" >
+						<li id="stream_item">
+							<span class="list-group-item"><%= user.name %></span>
+							<%= check_box_tag "message[user_tokens][]", user.id, @message.users.include?(user), id: "user#{user.id}" %>
+						</li>
+					</label>
+					<br>
+				<% end %>
+			</ul>
+		</div>
+
+		<div id ="stream-footer">
+			<%= f.button :submit, class: "btn btn-outline" %>
+		</div>
+
+	<% end %>
+</div>

@@ -21,8 +21,8 @@ class MessagesController < ApplicationController
 
 	def index
 		@user = User.find(current_user)
-		@messages = Recipient.where(:user_id => @user).order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
-		@messages.unread.update_all(read: true, updated_at: Time.now.utc)
+		@messages = Recipient.where(:user_id => @user).order("created_at DESC")
+		# @messages.unread.update_all(read: true, updated_at: Time.now.utc)
 	end
 
 	private
