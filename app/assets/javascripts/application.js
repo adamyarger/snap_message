@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+  $(function() {
+   $('#flash').delay(500).slideDown('normal', function() {
+      $(this).delay(2500).slideUp();
+   });
+  });
+});
