@@ -1,5 +1,11 @@
-<%= render 'messages/recipients' %>
+
+<div class="form-bigbox">
+	<div class="form-box">
+		<%= render 'messages/recipients' %>
+	</div>
+</div>
+
 
 <% @messages.each do |message| %>
-		<%= message.body %>
+		<li><%= message.message.body %></li>
 <% end %>
