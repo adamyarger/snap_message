@@ -1,7 +1,7 @@
-User.create!(username:  "muffins",
-             email: "example@example.org",
-             password:              "gangstar1",
-             password_confirmation: "gangstar1")
+# User.create!(username:  "muffins",
+#              email: "example@example.org",
+#              password:              "gangstar1",
+#              password_confirmation: "gangstar1")
 
 15.times do |n|
   name  = Faker::Internet.user_name
