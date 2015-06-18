@@ -20,7 +20,7 @@
     @include clearfix;
     position: relative;
     padding: 15px 25px 15px 25px;
-    @include linear-gradient(#664a86, #534292)
+    @include linear-gradient(#0078D7, #2680C7)
   }
 
   .logo {
@@ -75,7 +75,7 @@
     width: 100%;
 
     a{
-      color: tint(red, 60%);
+      color: tint(#2680C7, 80%);
 
       &:hover {
         color: $white;
