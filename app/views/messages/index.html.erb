@@ -1,1 +1,5 @@
 <%= render 'messages/recipients' %>
+
+<% @messages.each do |message| %>
+		<%= message.body %>
+<% end %>

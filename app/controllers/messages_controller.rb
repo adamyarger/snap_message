@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
 
 	def index
 		@user = User.find(current_user)
-		@messages = Recipient.where(:user_id => @user).order("created_at DESC")
+		@messages = current_user.messages
 		@recipients = User.all
 		@message = Message.new
 		# @messages.unread.update_all(read: true, updated_at: Time.now.utc)
