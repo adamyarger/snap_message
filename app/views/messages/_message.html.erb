@@ -1,0 +1,28 @@
+<% @messages.each do |message| %>
+  <div class="post_show">
+    <div class="panel panel-default">
+      <div class="panel-heading post_media">
+        <% if message.message.html.present? %>
+        <%= message.message.html.html_safe %>
+        <% end %>
+      </div>
+      <div class="post-body">
+        <%= message.message.content %>
+      </div>
+      <div class="panel-footer">
+        <div class="row">
+          <div class="name_avatar u-pull-left">
+            <span class="round-image-50 name  user_avatar u-pull-left">
+            <%= link_to image_tag(message.message.sender.avatar.url(:thumb)), message.message.sender %>
+            </span>
+            <span class="user_name post_name u-pull-left">
+            <%= link_to message.message.sender.name, message.message.sender %>
+            </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
