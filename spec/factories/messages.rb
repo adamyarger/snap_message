@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :message do
     body "MyText"
-		sender
+		sender_id 1
   end
 end
