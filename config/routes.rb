@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   
   root 'static_pages#root'
 
-  resources :messages, only: [:create, :destroy, :index]
+  resources :messages, only: [:create, :destroy, :index, :new]
 end

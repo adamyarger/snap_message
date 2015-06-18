@@ -5,7 +5,8 @@
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
         <% if user_signed_in? %>
-          <li class="nav-link"><%= link_to "New", messages_path %></li>
+          <li class="nav-link"><%= link_to "New", new_message_path %></li>
+          <li class="nav-link"><%= link_to "Inbox", messages_path %></li>
           <li class="nav-link"><%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>
         <% else %>
           <li class="nav-link"><%= link_to "Sign In", new_user_session_path %></li>
