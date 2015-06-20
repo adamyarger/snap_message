@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
 			redirect_to root_path
 		else
 			flash[:alert] = "Great Scott!"
-			redirect_to :new
+			render :new
 		end
 	end
 

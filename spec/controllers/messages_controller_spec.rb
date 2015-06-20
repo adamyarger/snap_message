@@ -22,6 +22,23 @@ describe MessagesController, type: :controller do
 			end
     end
 
+    context 'with invalid attributes' do
+    	before(:each) do
+    		user = FactoryGirl.create :user
+    		sign_in user
+    	end
+
+    	it 'creates an invalid message' do
+    		post :create, message: attributes_for(:message, body: nil)
+    		expect(Message.count).to eq(0)
+    	end
+
+    	it 're-renders the new view' do
+    		post :create, message: attributes_for(:message, body: nil)
+    		expect(response).to render_template :new
+    	end
+    end
+
     
 	end
 
