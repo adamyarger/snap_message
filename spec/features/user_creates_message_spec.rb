@@ -10,8 +10,8 @@ feature 'user creates a new message' do
 
 		click_on 'New'
 		fill_in 'Message', with: "hello world"
-		check('user3')
-		
+		check('user' + user.id.to_s)
+		check('user' + user2.id.to_s)
 		expect(page).to have_css '#stream_item'
 		click_on 'submit'
 
