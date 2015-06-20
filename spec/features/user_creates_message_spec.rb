@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 feature 'user creates a new message' do
 	scenario 'successfully' do
 		user = FactoryGirl.create(:user)
@@ -9,8 +10,9 @@ feature 'user creates a new message' do
 
 		click_on 'New'
 		fill_in 'Message', with: "hello world"
-		check('user1')
-		check('user2')
+		check('user3')
+		
+		expect(page).to have_css '#stream_item'
 		click_on 'submit'
 
 		expect(page.current_path).to eq root_path
